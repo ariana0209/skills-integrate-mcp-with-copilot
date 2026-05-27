@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard — Mergington High</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* small override for admin layout */
+      .admin-container { max-width: 1000px; margin: 0 auto; }
+      table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+      th, td { padding: 8px; border: 1px solid #e0e0e0; text-align: left; }
+      th { background: #f1f1f1; }
+      .action-btn { background: #c62828; color: white; border: none; padding: 6px 8px; border-radius: 4px; cursor: pointer; }
+      .small { font-size: 13px; color: #555; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Mergington High School</h1>
+      <h2>Admin Dashboard</h2>
+    </header>
+
+    <main class="admin-container">
+      <section id="admin-activities">
+        <h3>Activities & Participants</h3>
+        <div id="admin-message" class="hidden"></div>
+        <table id="activities-table">
+          <thead>
+            <tr>
+              <th>Activity</th>
+              <th>Description</th>
+              <th>Schedule</th>
+              <th>Participants</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- populated by admin.js -->
+          </tbody>
+        </table>
+      </section>
+
+      <section id="reports">
+        <h3>Quick Reports</h3>
+        <p class="small">Export a simple roster CSV for an activity.</p>
+        <div>
+          <select id="report-activity">
+            <option value="">-- Select activity --</option>
+          </select>
+          <button id="export-csv">Export CSV</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Mergington High School</p>
+    </footer>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
